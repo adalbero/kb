@@ -1,0 +1,3 @@
+<mat-selection-list role="list" [multiple]="false" (selectionChange)="onChange($event)">
+  <mat-list-option role="listitem" *ngFor="let item of datasource" [value]="item">{{ item }}</mat-list-option>
+</mat-selection-list>

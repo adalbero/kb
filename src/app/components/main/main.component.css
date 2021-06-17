@@ -1,0 +1,24 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.app-main-title-bar {
+  flex: 0 0 auto;
+}
+
+.app-main-nav-container {
+  flex: 1 1 auto;
+}
+
+.app-main-nav-bar {
+  width: 15rem;
+  overflow: hidden;
+}
+
+.app-main-nav-content {
+  overflow: hidden;
+}

@@ -1,0 +1,11 @@
+<div class="app-show-content-host">
+  <div class="app-show-content-page">
+    <markdown
+      *ngIf="!!src"
+      class="app-markdown"
+      emoji
+      lineNumbers
+      [src]="src"
+    ></markdown>
+  </div>
+</div>

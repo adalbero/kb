@@ -1,0 +1,81 @@
+.app-markdown blockquote {
+  overflow: auto;
+
+  background: rgba(10, 133, 255, 0.14);
+  border-left: 4px solid #06c;
+  border-radius: 4px;
+  color: #666;
+  margin: 20px 0;
+  padding: 1px 20px;
+}
+
+.app-markdown P {
+  margin: inherit;
+}
+
+.app-markdown code:not([class*="language-"]) {
+  background: rgba(0, 0, 0, 0.07);
+  border-radius: 3px;
+  font-size: 0.94em;
+  padding: 0 6px 2px;
+}
+
+.app-markdown hr {
+  border: solid rgba(0, 0, 0, 0.12);
+  border-width: 1px 0 0;
+}
+
+.app-markdown table {
+  width: 100%;
+}
+
+.app-markdown table td,
+.app-markdown table th {
+  padding: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.app-markdown table td {
+  font-size: 15px;
+  height: 48px;
+}
+
+.app-markdown table th {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.app-markdown h1,
+.app-markdown h2,
+.app-markdown h3,
+.app-markdown h4,
+.app-markdown h5,
+.app-markdown h6 {
+  font: unset;
+  font-size: unset;
+  font-weight: bold;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  line-height: 1.5;
+}
+
+.app-markdown h1 {
+  font-size: 2em;
+}
+
+.app-markdown h2 {
+  font-size: 1.5em;
+}
+
+.app-markdown h3 {
+    font-size: 1.17em;
+  }
+  .app-markdown h4 {
+    font-size: 1em;
+  }
+  .app-markdown h5 {
+    font-size: 0.83em;
+  }
+  .app-markdown h6 {
+    font-size: 0.67em;
+  }
+        
