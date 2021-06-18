@@ -11,8 +11,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MarkdownModule } from 'ngx-markdown';
 import { AppComponent } from './app.component';
 import { MainComponent } from './components/main/main.component';
+import { MarkdownViewComponent } from './components/markdown-view/markdown-view.component';
 import { NavListComponent } from './components/nav-list/nav-list.component';
-import { ShowContentComponent } from './components/show-content/show-content.component';
 import { TitleBarComponent } from './components/title-bar/title-bar.component';
 
 @NgModule({
@@ -21,7 +21,7 @@ import { TitleBarComponent } from './components/title-bar/title-bar.component';
     MainComponent,
     TitleBarComponent,
     NavListComponent,
-    ShowContentComponent,
+    MarkdownViewComponent,
   ],
   imports: [
     BrowserModule,

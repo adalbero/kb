@@ -1,12 +1,13 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AppService } from 'src/app/services/app.service';
 
 @Component({
-  selector: 'app-show-content',
-  templateUrl: './show-content.component.html',
-  styleUrls: ['./show-content.component.css'],
+  selector: 'app-markdown-view',
+  templateUrl: './markdown-view.component.html',
+  styleUrls: ['./markdown-view.component.css']
 })
-export class ShowContentComponent implements OnInit {
+export class MarkdownViewComponent implements OnInit {
+
   src: string = this.getPath('Main.md');
 
   constructor(private app: AppService) {}
