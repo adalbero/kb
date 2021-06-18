@@ -1,7 +1,7 @@
 export interface KBArticle {
-  page: string;
-  name: string;
-  title?: string;
+  id: string;
+  path: string;
+  title: string;
   tags: string[];
 }
 

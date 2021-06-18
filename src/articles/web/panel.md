@@ -1,8 +1,6 @@
 # How to layout HTML in panels (top, middle, bottom, left, right, center) with CSS
 
-## Tags:
-
-`#panel #css #flex`
+> Tags: `#panel` `#css` `#flex`
 
 ## Container
 
@@ -93,3 +91,13 @@
   overflow-y: auto;
 }
 ```
+
+## CodePen
+
+> <p class="codepen" data-height="535" data-theme-id="dark" data-default-tab="html,result" data-user="adalbero" data-slug-hash="mdWQVgb" data-preview="true" style="height: 535px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Panels">
+>   <span>See the Pen <a href="https://codepen.io/adalbero/pen/mdWQVgb">
+>   Panels</a> by Adalbero Guimaraes (<a href="https://codepen.io/adalbero">@adalbero</a>)
+>   on <a href="https://codepen.io">CodePen</a>.</span>
+
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>

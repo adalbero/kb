@@ -1,0 +1,14 @@
+<div class="app-article-content-host">
+  <div class="app-article-content-page" *ngIf="article; else notFound">
+    <markdown
+      class="app-markdown"
+      emoji
+      [lineNumbers]="false"
+      [src]="getPath()"
+    ></markdown>
+  </div>
+
+  <ng-template #notFound>
+    <h1>Article not found: {{ id }}</h1>
+  </ng-template>
+</div>

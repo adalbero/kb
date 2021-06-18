@@ -15,7 +15,7 @@ export class NavListComponent implements OnInit {
   constructor(private app: AppService, private repo: RepositoryService) {}
 
   ngOnInit(): void {
-    this.repo.repository$.subscribe((repo) => {
+    this.repo.requestRepository().subscribe((repo) => {
       this.datasource = repo.articles;
     });
   }
@@ -23,5 +23,9 @@ export class NavListComponent implements OnInit {
   onChange(ev: MatSelectionListChange) {
     const src = ev.options[0].value;
     this.app.src$.emit(src);
+  }
+
+  getLink(article: KBArticle): string {
+    return `article/${article.id}`;
   }
 }

@@ -1,12 +1,8 @@
-<mat-selection-list
-  role="list"
-  [multiple]="false"
-  (selectionChange)="onChange($event)"
->
-  <mat-list-option
-    role="listitem"
+<mat-nav-list role="list">
+  <mat-list-item
     *ngFor="let article of datasource"
-    [value]="article.page"
-    >{{ article.title || article.name }}</mat-list-option
+    [routerLink]="getLink(article)"
   >
-</mat-selection-list>
+    {{ article.title }}
+  </mat-list-item>
+</mat-nav-list>
