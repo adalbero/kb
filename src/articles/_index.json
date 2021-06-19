@@ -2,28 +2,32 @@
   "updated": "2021-06-18T14:43",
   "articles": [
     {
-      "id": "markdown",
-      "title": "Markdown",
-      "path": "Markdown.md",
-      "tags": []
+      "id": "markdown/sample",
+      "title": "Adalbero's KB - Markdown syntax",
+      "path": "markdown",
+      "file": "Sample.md",
+      "tags": ["markdown", "sample"]
     },
     {
-      "id": "markdown-it",
+      "id": "markdown/markdown-it",
       "title": "markdown-it",
-      "path": "markdown-it.md",
-      "tags": []
+      "path": "markdown",
+      "file": "markdown-it.md",
+      "tags": ["markdown"]
     },
     {
       "id": "ngx-markdown",
       "title": "ngx-markdown",
-      "path": "ngx-markdown.md",
-      "tags": []
+      "path": "markdown",
+      "file": "ngx-markdown.md",
+      "tags": ["markdown"]
     },
     {
       "id": "web/panel",
-      "title": "Panel",
-      "path": "web/panel.md",
-      "tags": []
+      "title": "How to layout HTML in panels (top, middle, bottom, left, right, center) with CSS",
+      "path": "web",
+      "file": "panel.md",
+      "tags": ["panel", "css", "flex", "web", "panel"]
     }
   ]
 }

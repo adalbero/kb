@@ -16,6 +16,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MainComponent } from './components/main/main.component';
 import { NavListComponent } from './components/nav-list/nav-list.component';
 import { TitleBarComponent } from './components/title-bar/title-bar.component';
+import { CdkAccordionModule } from '@angular/cdk/accordion';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -50,6 +51,8 @@ const appRoutes: Routes = [
     MatSidenavModule,
     MatListModule,
     MatSelectModule,
+
+    CdkAccordionModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

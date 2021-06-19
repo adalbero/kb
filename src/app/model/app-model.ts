@@ -1,6 +1,7 @@
 export interface KBArticle {
   id: string;
   path: string;
+  file: string;
   title: string;
   tags: string[];
 }

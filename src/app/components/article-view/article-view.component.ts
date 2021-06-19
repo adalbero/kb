@@ -37,7 +37,11 @@ export class ArticleViewComponent implements OnInit {
   }
 
   getPath(): string {
-    return `articles/${this.article?.path || ''}`;
+    if (this.article) {
+      return `articles/${this.article.path}/${this.article?.file}`;
+    } else {
+      return '';
+    }
   }
 
   static routeMatcher(

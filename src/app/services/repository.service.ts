@@ -22,6 +22,14 @@ export class RepositoryService {
     return this.loadRepository();
   }
 
+  getTags(repo: KBRepository): string[] {
+    const set = new Set<string>();
+
+    repo.articles.map((a) => a.tags.forEach((t) => set.add(t)));
+
+    return [...set];
+  }
+
   loadRepository(): Observable<KBRepository> {
     return this.loadFile('articles/_index.json').pipe(
       map((repo: KBRepository) => {
@@ -35,8 +43,11 @@ export class RepositoryService {
     return this.http.get<any>(file);
   }
 
-  requestArticles(): Observable<KBArticle[]> {
-    return this.requestRepository().pipe(map((repo) => repo.articles));
+  requestArticles(tag?: string): Observable<KBArticle[]> {
+    console.log('request ', tag);
+    return this.requestRepository().pipe(
+      map((repo) => repo.articles.filter((a) => !tag || a.tags.includes(tag)))
+    );
   }
 
   requestArticle(id: string): Observable<KBArticle | undefined> {
