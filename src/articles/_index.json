@@ -1,40 +1,65 @@
 {
-  "updated": "2021-06-18T14:43",
+  "updated": "2021-06-20T16:53:38.588Z",
   "articles": [
     {
-      "id": "markdown/sample",
-      "title": "Adalbero's KB - Markdown syntax",
-      "path": "markdown",
-      "file": "Sample.md",
-      "tags": ["markdown", "sample"]
+      "id": "dev/dev-tools",
+      "title": "Developer Tools",
+      "path": "dev",
+      "file": "dev-tools.md",
+      "tags": [
+        "dev",
+        "tools",
+        "eclipse",
+        "nodejs",
+        "git",
+        "windows",
+        "terminal",
+        "vscode",
+        "javascript",
+        "angular",
+        "typescript"
+      ]
     },
     {
       "id": "markdown/markdown-it",
-      "title": "markdown-it",
+      "title": "h1 Heading 8-)",
       "path": "markdown",
       "file": "markdown-it.md",
-      "tags": ["markdown"]
+      "tags": [
+        "markdown",
+        "change"
+      ]
     },
     {
       "id": "markdown/ngx-markdown",
       "title": "ngx-markdown",
       "path": "markdown",
       "file": "ngx-markdown.md",
-      "tags": ["markdown"]
+      "tags": [
+        "markdown"
+      ]
+    },
+    {
+      "id": "markdown/sample",
+      "title": "Adalbero's KB - Markdown syntax",
+      "path": "markdown",
+      "file": "Sample.md",
+      "tags": [
+        "markdown",
+        "kb"
+      ]
     },
     {
       "id": "web/panel",
       "title": "How to layout HTML in panels (top, middle, bottom, left, right, center) with CSS",
       "path": "web",
       "file": "panel.md",
-      "tags": ["panel", "css", "flex", "web", "panel"]
-    },
-    {
-      "id": "dev/dev-tools",
-      "title": "Developer Tools",
-      "path": "dev",
-      "file": "dev-tools.md",
-      "tags": ["dev", "eclipse", "nodejs", "git"]
+      "tags": [
+        "web",
+        "panel",
+        "css",
+        "flex"
+      ]
     }
   ]
 }
