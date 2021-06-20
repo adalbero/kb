@@ -16,7 +16,7 @@
       "tags": ["markdown"]
     },
     {
-      "id": "ngx-markdown",
+      "id": "markdown/ngx-markdown",
       "title": "ngx-markdown",
       "path": "markdown",
       "file": "ngx-markdown.md",
@@ -28,6 +28,13 @@
       "path": "web",
       "file": "panel.md",
       "tags": ["panel", "css", "flex", "web", "panel"]
+    },
+    {
+      "id": "dev/dev-tools",
+      "title": "Developer Tools",
+      "path": "dev",
+      "file": "dev-tools.md",
+      "tags": ["dev", "eclipse", "nodejs", "git"]
     }
   ]
 }
