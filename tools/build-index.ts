@@ -1,6 +1,4 @@
-import { Extractor } from '@angular/compiler';
 import * as fs from 'fs';
-import * as readline from 'readline';
 
 main();
 
@@ -15,7 +13,8 @@ type Article = {
 function main() {
   console.log('BEGIN');
 
-  const ROOT = '../src/articles';
+  const ROOT = `${__dirname}/../src/articles`;
+  console.log('ROOT: ', ROOT);
 
   const articles: Article[] = [];
 

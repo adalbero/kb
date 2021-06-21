@@ -4,7 +4,8 @@ var fs = require("fs");
 main();
 function main() {
     console.log('BEGIN');
-    var ROOT = '../src/articles';
+    var ROOT = __dirname + "/../src/articles";
+    console.log('ROOT: ', ROOT);
     var articles = [];
     indexArticles(articles, ROOT);
     writeIndex(articles, ROOT + "/_index.json");
