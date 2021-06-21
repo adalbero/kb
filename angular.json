@@ -42,7 +42,8 @@
               "./node_modules/prismjs/components/prism-sql.min.js",
               "./node_modules/prismjs/components/prism-typescript.min.js",
               "./node_modules/emoji-toolkit/lib/js/joypixels.min.js"
-            ]
+            ],
+            "baseHref": "/kb/"
           },
           "configurations": {
             "production": {
