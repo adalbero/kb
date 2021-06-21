@@ -1,0 +1,67 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  :root,
+  BODY {
+    margin: 0;
+  }
+  
+  .before,
+  .after {
+    height: 1.5rem;
+  }
+
+  .parent {
+    height: calc(100vh - 3rem);
+    position: relative;
+    margin: 0 1em;
+  }
+
+  .panel {
+    display: flex;
+    flex-direction: column;
+  
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  
+  .panel-top {
+    flex: 0 0 5rem;
+  }
+  
+  .panel-middle {
+    flex: 1 1 auto;
+    
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+  }
+  
+  .panel-bottom {
+    flex: 0 0 5rem;
+  }
+  
+  .panel-left {
+    flex: 0 0 10rem;
+    overflow: auto;
+  }
+
+  .panel-left LI {
+    white-space: nowrap;
+  }
+  
+  .panel-right {
+    flex: 0 0 10rem;
+    overflow: auto;
+  }
+
+  .panel-center {
+    flex: 1 1 auto;
+    overflow: auto;
+  }
+  
+  
