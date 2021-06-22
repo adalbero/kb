@@ -31,7 +31,7 @@ export class RepositoryService {
   }
 
   loadRepository(): Observable<KBRepository> {
-    return this.loadFile('articles/_index.json').pipe(
+    return this.loadFile('articles/index.json').pipe(
       map((repo: KBRepository) => {
         this.repository = repo;
         return repo;

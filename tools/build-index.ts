@@ -20,7 +20,7 @@ function main() {
 
   indexArticles(articles, ROOT);
 
-  writeIndex(articles, `${ROOT}/_index.json`);
+  writeIndex(articles, `${ROOT}/index.json`);
 
   console.log('Articles:', articles);
 
