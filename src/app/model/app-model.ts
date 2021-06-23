@@ -11,6 +11,11 @@ export interface KBRepository {
   articles: KBArticle[];
 }
 
+export interface KBTag {
+  tag: string;
+  count: number;
+}
+
 // Constants
 
 export const EMPTY_REPO: KBRepository = {

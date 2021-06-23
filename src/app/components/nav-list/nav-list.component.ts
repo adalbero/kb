@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatSelectionListChange } from '@angular/material/list';
-import { Observable } from 'rxjs';
-import { KBArticle } from 'src/app/model/app-model';
+import { KBArticle, KBTag } from 'src/app/model/app-model';
 import { AppService } from 'src/app/services/app.service';
 import { RepositoryService } from 'src/app/services/repository.service';
 
@@ -12,16 +10,20 @@ import { RepositoryService } from 'src/app/services/repository.service';
 })
 export class NavListComponent implements OnInit {
   articles: KBArticle[] = [];
-  tags: string[] = [];
+  tags: KBTag[] = [];
 
   expandedIndex = 0;
 
-  constructor(private app: AppService, private repo: RepositoryService) {}
+  constructor(public app: AppService, public repo: RepositoryService) {}
 
   ngOnInit(): void {
     this.repo.requestRepository().subscribe((r) => {
-      this.tags = this.repo.getTags(r);
       this.articles = [];
+    });
+
+    this.repo.articles$.subscribe((articles) => {
+      console.log(articles);
+      this.tags = this.repo.getAllTags(articles);
     });
   }
 
@@ -30,6 +32,8 @@ export class NavListComponent implements OnInit {
   }
 
   onOpen(tag: any) {
-    this.repo.requestArticles(tag).subscribe((list) => (this.articles = list));
+    this.repo
+      .requestArticles(tag.tag)
+      .subscribe((list) => (this.articles = list));
   }
 }

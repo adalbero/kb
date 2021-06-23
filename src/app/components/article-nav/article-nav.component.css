@@ -1,0 +1,15 @@
+:host {
+  flex: 1 1 auto;
+}
+
+.nav {
+  --background: rgba(0, 0, 0, 0.15);
+  --padding: 4px;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-text);
+  width: 100%;
+}

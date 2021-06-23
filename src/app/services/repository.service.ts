@@ -1,14 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, of, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { KBArticle, KBRepository } from '../model/app-model';
+import { KBArticle, KBRepository, KBTag } from '../model/app-model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class RepositoryService {
   private repository?: KBRepository;
+
+  articles$: Subject<KBArticle[]> = new Subject();
 
   constructor(private http: HttpClient) {
     this.loadRepository().subscribe();
@@ -22,18 +24,47 @@ export class RepositoryService {
     return this.loadRepository();
   }
 
-  getTags(repo: KBRepository): string[] {
-    const set = new Set<string>();
+  contains(list: string[], options?: string[]): boolean {
+    if (options) {
+      return !!list.find((item) => options.includes(item));
+    } else {
+      return true;
+    }
+  }
 
-    repo.articles.map((a) => a.tags.forEach((t) => set.add(t)));
+  filter(byTag?: string) {
+    if (this.repository) {
+      const options = byTag?.split(' ');
 
-    return [...set];
+      const list = this.repository.articles.filter((a) =>
+        this.contains(a.tags, options)
+      );
+      this.articles$.next(list);
+    }
+  }
+
+  getAllTags(articles: KBArticle[]): KBTag[] {
+    const tags: KBTag[] = [];
+
+    articles.map((a) =>
+      a.tags.forEach((name) => {
+        const tag = tags.find((t) => t.tag === name);
+        if (tag) {
+          tag.count++;
+        } else {
+          tags.push({ tag: name, count: 1 });
+        }
+      })
+    );
+
+    return tags.sort((a, b) => a.tag.localeCompare(b.tag));
   }
 
   loadRepository(): Observable<KBRepository> {
     return this.loadFile('articles/index.json').pipe(
       map((repo: KBRepository) => {
         this.repository = repo;
+        this.filter();
         return repo;
       })
     );

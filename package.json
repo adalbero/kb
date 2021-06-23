@@ -25,6 +25,7 @@
     "@angular/router": "^12.0.5",
     "bootstrap": "^5.0.1",
     "markdown-it": "^12.0.6",
+    "ngx-disqus": "^2.4.3",
     "ngx-markdown": "^12.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.1.0",

@@ -5,7 +5,7 @@ import { EventEmitter, Injectable } from '@angular/core';
 })
 export class AppService {
 
-  src$: EventEmitter<string> = new EventEmitter();
+  navClosed = false;
   
   constructor() { }
 }

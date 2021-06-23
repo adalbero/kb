@@ -9,12 +9,14 @@
     (opened)="onOpen(tag)"
   >
     <div class="app-accordion-item-header" (click)="accordionItem.toggle()">
-      #{{ tag }}
+      #{{ tag.tag }} ({{ tag.count }})
       <span class="app-accordion-item-description">
         <button mat-icon-button>
-          <mat-icon>{{
-            accordionItem.expanded ? "expand_more" : "navigate_next"
-          }}</mat-icon>
+          <mat-icon
+            [ngClass]="{ icon: true, 'icon-expanded': accordionItem.expanded }"
+          >
+            navigate_next
+          </mat-icon>
         </button>
       </span>
     </div>
@@ -29,13 +31,7 @@
           *ngFor="let article of articles"
           [routerLink]="getLink(article)"
         >
-          <div mat-line class="item-name">{{ article.file }}</div>
-          <div mat-line class="item-title">{{ article.title }}</div>
-          <div mat-line class="item-tags">
-            <span *ngFor="let tag of article.tags" class="item-tag"
-              >#{{ tag }}</span
-            >
-          </div>
+          <app-article-nav [article]="article"></app-article-nav>
         </mat-list-item>
       </mat-nav-list>
     </div>

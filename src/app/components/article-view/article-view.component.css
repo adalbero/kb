@@ -12,3 +12,25 @@
   margin: 0 auto 0 auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.app-article-disqus {
+  max-width: 64rem;
+  padding: 1rem;
+  margin: 2rem auto 0 auto;
+  position: relative;
+}
+
+.app-article-disqus::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 0.3em;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75) 50%,
+    rgba(0, 0, 0, 0)
+  );
+}
