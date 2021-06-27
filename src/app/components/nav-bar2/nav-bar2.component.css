@@ -1,0 +1,124 @@
+:host {
+  --color-search: rgba(0, 0, 0, 0.5);
+}
+
+.app-nav-bar {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  height: 100%;
+  overflow: hidden;
+
+  width: 15rem;
+  transition: width 500ms;
+
+  background: var(--color-surface);
+  color: var(--color-on-surface);
+}
+
+.app-nav-bar.collapsed {
+  width: 2.5rem;
+}
+
+.collapse-button {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+}
+
+.app-nav-bar .collapse-button .mat-icon {
+  transform: rotate(180deg);
+  transition: transform 500ms;
+}
+
+.app-nav-bar.collapsed .collapse-button .mat-icon {
+  transform: rotate(0deg);
+}
+
+.app-nav-bar .content {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.app-nav-bar.collapsed .content {
+  opacity: 0;
+}
+
+.header {
+  flex: 0 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 5;
+
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.header H2 {
+  margin: 0.5rem;
+  margin-bottom: 0;
+}
+
+.header .search-bar {
+  flex: 1 1 auto;
+
+  color: var(--color-search);
+  border: solid 2px var(--color-search);
+  border-radius: 50px;
+
+  display: flex;
+  margin: 0 0.5rem 1rem 0.5rem;
+  padding: 0 0.25rem;
+}
+
+.header .search-bar .mat-icon {
+  color: var(--color-search);
+}
+
+.search-bar INPUT {
+  flex: 1 1 auto;
+  border: none;
+  background: transparent;
+}
+
+.search-bar INPUT:focus,
+.search-bar INPUT:hover {
+  outline: none;
+}
+
+.result {
+  flex: 1 1 auto;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.result UL {
+  padding-inline-start: 20px;
+}
+
+.result-nav a,
+.result-nav a:visited {
+  display: block;
+  color: var(--color-on-surface);
+  padding: 0.5em 1em;
+  text-decoration: none;
+}
+
+.result-nav li {
+  list-style-type: none;
+}
+
+.result-nav a:hover {
+  background-color: #ddd;
+}
+
+.result-nav a.active {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}

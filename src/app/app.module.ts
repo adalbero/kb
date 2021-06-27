@@ -23,6 +23,13 @@ import { ListTagsComponent } from './components/list-tags/list-tags.component';
 import { MainComponent } from './components/main/main.component';
 import { NavListComponent } from './components/nav-list/nav-list.component';
 import { TitleBarComponent } from './components/title-bar/title-bar.component';
+import { Main2Component } from './components/main2/main2.component';
+import { NavBar2Component } from './components/nav-bar2/nav-bar2.component';
+import { TitleBar2Component } from './components/title-bar2/title-bar2.component';
+import { ExtraBar2Component } from './components/extra-bar2/extra-bar2.component';
+import { ArticleView2Component } from './components/article-view2/article-view2.component';
+import { ArticleCard2Component } from './components/article-card2/article-card2.component';
+import { ArticleIndex2Component } from './components/article-index2/article-index2.component';
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -44,6 +51,13 @@ const appRoutes: Routes = [
     ArticleNavComponent,
     ListTagsComponent,
     ListFolderComponent,
+    Main2Component,
+    NavBar2Component,
+    TitleBar2Component,
+    ExtraBar2Component,
+    ArticleView2Component,
+    ArticleCard2Component,
+    ArticleIndex2Component,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+
+  height: 100%;
+  padding: 1rem;
+
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.title H1 {
+  margin: 0;
+}

@@ -1,0 +1,37 @@
+.panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.panel__north {
+  flex: 0 0 3rem;
+}
+
+.panel__middle {
+  flex: 1 1 auto;
+
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.panel__west {
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+
+.panel__center {
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+.panel__east {
+  flex: none;
+  overflow: hidden;
+}
