@@ -3,6 +3,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
@@ -12,26 +13,29 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
-import { DisqusModule } from "ngx-disqus";
+import { DisqusModule } from 'ngx-disqus';
 import { MarkdownModule } from 'ngx-markdown';
 import { AppComponent } from './app.component';
+import { ArticleCard2Component } from './components/article-card2/article-card2.component';
+import { ArticleIndex2Component } from './components/article-index2/article-index2.component';
+import { ArticleListComponent } from './components/article-list/article-list.component';
 import { ArticleNavComponent } from './components/article-nav/article-nav.component';
 import { ArticleViewComponent } from './components/article-view/article-view.component';
+import { ArticleView2Component } from './components/article-view2/article-view2.component';
+import { ExtraBar2Component } from './components/extra-bar2/extra-bar2.component';
 import { HomeComponent } from './components/home/home.component';
 import { ListFolderComponent } from './components/list-folder/list-folder.component';
 import { ListTagsComponent } from './components/list-tags/list-tags.component';
 import { MainComponent } from './components/main/main.component';
-import { NavListComponent } from './components/nav-list/nav-list.component';
-import { TitleBarComponent } from './components/title-bar/title-bar.component';
 import { Main2Component } from './components/main2/main2.component';
 import { NavBar2Component } from './components/nav-bar2/nav-bar2.component';
+import { NavListComponent } from './components/nav-list/nav-list.component';
+import { TitleBarComponent } from './components/title-bar/title-bar.component';
 import { TitleBar2Component } from './components/title-bar2/title-bar2.component';
-import { ExtraBar2Component } from './components/extra-bar2/extra-bar2.component';
-import { ArticleView2Component } from './components/article-view2/article-view2.component';
-import { ArticleCard2Component } from './components/article-card2/article-card2.component';
-import { ArticleIndex2Component } from './components/article-index2/article-index2.component';
+
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'article', component: ArticleListComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
     matcher: ArticleViewComponent.routeMatcher,
@@ -58,6 +62,7 @@ const appRoutes: Routes = [
     ArticleView2Component,
     ArticleCard2Component,
     ArticleIndex2Component,
+    ArticleListComponent,
   ],
   imports: [
     BrowserModule,
@@ -77,6 +82,7 @@ const appRoutes: Routes = [
     MatListModule,
     MatSelectModule,
     MatTabsModule,
+    MatCardModule,
 
     CdkAccordionModule,
   ],

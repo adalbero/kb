@@ -36,8 +36,8 @@ export class RepositoryService {
     if (this.repository) {
       const options = byTag?.split(' ');
 
-      const list = this.repository.articles.filter((a) =>
-        this.contains(a.tags, options)
+      const list = this.repository.articles.filter(
+        (a) => !byTag || this.contains(a.tags, options)
       );
       this.articles$.next(list);
     }

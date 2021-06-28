@@ -1,1 +1,20 @@
-<p>article-card2 works!</p>
+<mat-card class="article-card">
+  <img class="photo" [routerLink]="article?.id" mat-card-image [src]="photo" />
+  <mat-card-content>
+    <p class="tags">
+      <code>{{ getTags() }}</code>
+    </p>
+    <p class="name" [routerLink]="article?.id">{{ article?.file }}</p>
+    <p class="title">{{ article?.title }}</p>
+  </mat-card-content>
+  <mat-card-actions ali>
+    <button mat-raised-button color="primary" [routerLink]="article?.id">
+      OPEN
+    </button>
+  </mat-card-actions>
+  <mat-card-header>
+    <img mat-card-avatar src="assets/adalbero_f_guimaraes.jpg" height="40" />
+    <mat-card-title>Adalbero F. Guimaraes</mat-card-title>
+    <mat-card-subtitle>28 Jun 2021</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>

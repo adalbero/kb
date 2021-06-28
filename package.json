@@ -9,6 +9,7 @@
     "build-pages": "ng build --configuration production --output-path docs && cp docs/index.html docs/404.html",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "deploy": "ng deploy",
     "build-index": "node tools/build-index.js"
   },
   "private": true,
@@ -29,6 +30,7 @@
     "ngx-markdown": "^12.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.1.0",
+    "unsplash-js": "^7.0.12",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
