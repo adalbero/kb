@@ -28,6 +28,7 @@ jobs:
       - name: Checkout gh-pages
         uses: action/checkout@v2
         with:
+          ref: gh-pages
           persist-credentials: false
           fetch-depth: 0
       - run: checkout master src/articles/index.json
