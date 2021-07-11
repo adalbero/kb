@@ -1,6 +1,9 @@
 name: Build Index
 
-on: [push]
+on:
+  pull_request:
+    branch:
+      - master
 
 jobs:
   build-index:
