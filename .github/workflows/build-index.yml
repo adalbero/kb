@@ -6,10 +6,19 @@ jobs:
   build-index:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout master
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+          fetch-depth: 0
       - name: Use Node.js 14.x
         uses: actions/setup-node@v2
         with:
           node-version: '14.x'
           cache: 'npm'
-      - run: npm run build-index
+      - name: Run build-index
+        run: npm run build-index
+      - name: Commit & Push master
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
