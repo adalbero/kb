@@ -8,7 +8,7 @@ function main() {
     console.log('ROOT: ', ROOT);
     var articles = [];
     indexArticles(articles, ROOT);
-    writeIndex(articles, ROOT + "/_index.json");
+    writeIndex(articles, ROOT + "/index.json");
     console.log('Articles:', articles);
     console.log('END');
 }
