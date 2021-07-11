@@ -1,5 +1,5 @@
 {
-  "updated": "2021-06-21T16:47:35.701Z",
+  "updated": "2021-07-11T13:11:40.168Z",
   "articles": [
     {
       "id": "dev/dev-tools",
@@ -32,6 +32,17 @@
       ]
     },
     {
+      "id": "markdown/sample",
+      "title": "Adalbero's KB - Markdown syntax",
+      "path": "markdown",
+      "file": "Sample.md",
+      "tags": [
+        "markdown",
+        "kb",
+        "workflow"
+      ]
+    },
+    {
       "id": "markdown/markdown-it",
       "title": "h1 Heading 8-)",
       "path": "markdown",
@@ -48,16 +59,6 @@
       "file": "ngx-markdown.md",
       "tags": [
         "markdown"
-      ]
-    },
-    {
-      "id": "markdown/sample",
-      "title": "Adalbero's KB - Markdown syntax",
-      "path": "markdown",
-      "file": "Sample.md",
-      "tags": [
-        "markdown",
-        "kb"
       ]
     },
     {
