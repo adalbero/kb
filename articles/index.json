@@ -1,5 +1,5 @@
 {
-  "updated": "2021-07-11T13:11:40.168Z",
+  "updated": "2021-07-11T14:20:27.728Z",
   "articles": [
     {
       "id": "dev/dev-tools",
@@ -28,7 +28,8 @@
       "tags": [
         "dev",
         "git",
-        "github"
+        "github",
+        "workflow"
       ]
     },
     {
