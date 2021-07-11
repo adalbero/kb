@@ -25,21 +25,4 @@ jobs:
         uses: actions-js/push@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-  copy-index:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout gh-pages
-        uses: action/checkout@v2
-        with:
-          ref: gh-pages
-          persist-credentials: false
-          fetch-depth: 0
-      - run: checkout master src/articles/index.json
-      - run: cp src/articles/index.json articles/index.json
-      - run: rm -r src
-      - run: git add -A
-      - name: Commit & Push gh-pages
-        uses: actions-js/push@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
       
