@@ -1,6 +1,6 @@
 # Adalbero's KB - Markdown syntax
 
-Tags: `#markdown` `#kb`
+Tags: `#markdown #kb #workflow`
 
 ### Headers
 
