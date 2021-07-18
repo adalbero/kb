@@ -2,18 +2,20 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { KBArticle, KBRepository, KBTag } from '../model/app-model';
+import { EMPTY_USER, KBArticle, KBRepository, KBTag, KBUser } from '../model/app-model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class RepositoryService {
   private repository?: KBRepository;
+  private users?: KBUser[];
 
   articles$: Subject<KBArticle[]> = new Subject();
 
   constructor(private http: HttpClient) {
     this.loadRepository().subscribe();
+    this.loadUsers().subscribe();
   }
 
   requestRepository(): Observable<KBRepository> {
@@ -30,6 +32,15 @@ export class RepositoryService {
     } else {
       return true;
     }
+  }
+
+  getUser(user: string): KBUser {
+    let u: KBUser = EMPTY_USER;
+    if (this.users) {
+      u = this.users.find(x => x.user === user) || u;
+    }
+
+    return u;
   }
 
   filter(byTag?: string) {
@@ -66,6 +77,15 @@ export class RepositoryService {
         this.repository = repo;
         this.filter();
         return repo;
+      })
+    );
+  }
+
+  loadUsers(): Observable<KBUser[]> {
+    return this.loadFile('articles/users.json').pipe(
+      map((users: KBUser[]) => {
+        this.users = users;
+        return users;
       })
     );
   }

@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { KBArticle } from 'src/app/model/app-model';
+import { EMPTY_USER, KBArticle, KBUser } from 'src/app/model/app-model';
 import { PhotosService } from 'src/app/services/photos.service';
+import { RepositoryService } from 'src/app/services/repository.service';
 
 @Component({
   selector: 'app-article-card2',
@@ -9,10 +10,11 @@ import { PhotosService } from 'src/app/services/photos.service';
 })
 export class ArticleCard2Component implements OnInit {
   @Input() article?: KBArticle;
+  user: KBUser = EMPTY_USER;
 
   photo?: string;
 
-  constructor(public photos: PhotosService) { }
+  constructor(public photos: PhotosService, public repo: RepositoryService) { }
 
   ngOnInit(): void {
     if (this.article) {
@@ -22,6 +24,10 @@ export class ArticleCard2Component implements OnInit {
         const idx = Math.abs(this.getHash(this.article?.id)) % 100;
         console.log(idx);
         this.photos.requestPhoto('code', idx).subscribe((url) => (this.photo = url));
+      }
+
+      if (this.article.author) {
+        this.user = this.repo.getUser(this.article.author);
       }
     }
   }

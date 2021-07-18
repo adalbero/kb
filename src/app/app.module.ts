@@ -36,12 +36,12 @@ import { TitleBar2Component } from './components/title-bar2/title-bar2.component
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'article', component: ArticleListComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'article', pathMatch: 'full' },
   {
     matcher: ArticleViewComponent.routeMatcher,
     component: ArticleViewComponent,
   },
-  { path: '**', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', redirectTo: 'article', pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -89,4 +89,4 @@ const appRoutes: Routes = [
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

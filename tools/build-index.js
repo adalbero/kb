@@ -27,6 +27,7 @@ function writeIndex(articles, path) {
     });
 }
 function indexArticles(articles, root, path, file) {
+    var _a;
     var newPath = join([path, file], '/');
     var fullPath = join([root, path, file], '/');
     console.log('newPath', newPath);
@@ -48,6 +49,10 @@ function indexArticles(articles, root, path, file) {
         if (fs.existsSync(root + "/" + imgPath)) {
             img_1 = "articles/" + imgPath;
         }
+        var time = ((_a = fs.statSync(root + "/" + articlePath_1 + "/" + name_1 + ".md")) === null || _a === void 0 ? void 0 : _a.mtime) || 'no date';
+        var d = new Date(time).toDateString();
+        //const time = 123;
+        var date = "" + d;
         var lines = readFile(fullPath);
         lines.forEach(function (line) {
             var TITLE_REGEXP = /^\s*#\s+(.+)/g;
@@ -74,8 +79,11 @@ function indexArticles(articles, root, path, file) {
             id: id,
             title: title_1,
             path: articlePath_1,
+            name: name_1,
             file: file,
             img: img_1,
+            author: 'adalbero',
+            date: date,
             tags: tags_1
         };
         articles.push(article);

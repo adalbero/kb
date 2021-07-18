@@ -6,8 +6,11 @@ type Article = {
   id: string;
   title: string;
   path: string;
+  name: string;
   file: string;
   img: string | null;
+  author: string;
+  date: string;
   tags: string[];
 };
 
@@ -76,6 +79,11 @@ function indexArticles(
       img = `articles/${imgPath}`;
     }
 
+    const time = fs.statSync(`${root}/${articlePath}/${name}.md`)?.mtime || 'no date';
+    const d = new Date(time).toDateString();
+    //const time = 123;
+    const date = `${d}`;
+
     const lines = readFile(fullPath);
     lines.forEach((line) => {
       const TITLE_REGEXP = /^\s*#\s+(.+)/g;
@@ -105,8 +113,11 @@ function indexArticles(
       id,
       title,
       path: articlePath,
+      name,
       file,
       img,
+      author: 'adalbero',
+      date,
       tags,
     };
 

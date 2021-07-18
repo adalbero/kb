@@ -1,12 +1,15 @@
 {
-  "updated": "2021-07-18T07:52:38.829Z",
+  "updated": "2021-07-18T16:43:46.224Z",
   "articles": [
     {
       "id": "dev/dev-tools",
       "title": "Developer Tools",
       "path": "dev",
+      "name": "dev-tools",
       "file": "dev-tools.md",
       "img": "articles/dev/dev-tools.jpeg",
+      "author": "adalbero",
+      "date": "Sun Jul 18 2021",
       "tags": [
         "dev",
         "tools",
@@ -25,8 +28,11 @@
       "id": "dev/git",
       "title": "Git Tips & Tricks",
       "path": "dev",
+      "name": "git",
       "file": "git.md",
       "img": null,
+      "author": "adalbero",
+      "date": "Sun Jul 18 2021",
       "tags": [
         "dev",
         "git",
@@ -38,8 +44,11 @@
       "id": "markdown/sample",
       "title": "Adalbero's KB - Markdown syntax",
       "path": "markdown",
+      "name": "sample",
       "file": "Sample.md",
       "img": "https://cloudspoint.xyz/wp-content/uploads/2020/02/CODE-1.jpg",
+      "author": "adalbero",
+      "date": "Sun Jul 18 2021",
       "tags": [
         "markdown",
         "kb",
@@ -50,8 +59,11 @@
       "id": "markdown/markdown-it",
       "title": "h1 Heading 8-)",
       "path": "markdown",
+      "name": "markdown-it",
       "file": "markdown-it.md",
       "img": null,
+      "author": "adalbero",
+      "date": "Sun Jul 18 2021",
       "tags": [
         "markdown",
         "change"
@@ -61,8 +73,11 @@
       "id": "markdown/ngx-markdown",
       "title": "ngx-markdown",
       "path": "markdown",
+      "name": "ngx-markdown",
       "file": "ngx-markdown.md",
       "img": null,
+      "author": "adalbero",
+      "date": "Sun Jul 18 2021",
       "tags": [
         "markdown"
       ]
@@ -71,8 +86,11 @@
       "id": "web/panel",
       "title": "How to layout HTML in panels (top, middle, bottom, left, right, center) with CSS",
       "path": "web",
+      "name": "panel",
       "file": "panel.md",
       "img": null,
+      "author": "adalbero",
+      "date": "Sun Jul 18 2021",
       "tags": [
         "web",
         "panel",
