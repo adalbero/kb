@@ -38,11 +38,16 @@ function indexArticles(articles, root, path, file) {
         var articlePath_1 = (path === null || path === void 0 ? void 0 : path.substring(1)) || '';
         var tags_1 = [];
         var title_1 = '';
+        var img_1 = null;
         var values_1;
         var NAME_REGEXP = /(.+)\.md$/g;
         values_1 = extractText(NAME_REGEXP, file);
         var name_1 = (values_1 ? values_1[0] : file).toLowerCase();
         var id = articlePath_1 + "/" + name_1;
+        var imgPath = articlePath_1 + "/" + name_1 + ".jpeg";
+        if (fs.existsSync(root + "/" + imgPath)) {
+            img_1 = "articles/" + imgPath;
+        }
         var lines = readFile(fullPath);
         lines.forEach(function (line) {
             var TITLE_REGEXP = /^\s*#\s+(.+)/g;
@@ -50,6 +55,12 @@ function indexArticles(articles, root, path, file) {
                 values_1 = extractText(TITLE_REGEXP, line);
                 if (values_1)
                     title_1 = values_1[0];
+            }
+            var COVER_REGEXP = /^!\[cover\]\((.+)\)/g;
+            if (!img_1) {
+                values_1 = extractText(COVER_REGEXP, line);
+                if (values_1)
+                    img_1 = values_1[0];
             }
             var TAG_REGEXP = /#([a-z.]+)/g;
             values_1 = extractText(TAG_REGEXP, line);
@@ -64,6 +75,7 @@ function indexArticles(articles, root, path, file) {
             title: title_1,
             path: articlePath_1,
             file: file,
+            img: img_1,
             tags: tags_1
         };
         articles.push(article);

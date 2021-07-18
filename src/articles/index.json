@@ -1,11 +1,12 @@
 {
-  "updated": "2021-07-11T14:20:27.728Z",
+  "updated": "2021-07-18T07:52:38.829Z",
   "articles": [
     {
       "id": "dev/dev-tools",
       "title": "Developer Tools",
       "path": "dev",
       "file": "dev-tools.md",
+      "img": "articles/dev/dev-tools.jpeg",
       "tags": [
         "dev",
         "tools",
@@ -25,6 +26,7 @@
       "title": "Git Tips & Tricks",
       "path": "dev",
       "file": "git.md",
+      "img": null,
       "tags": [
         "dev",
         "git",
@@ -37,6 +39,7 @@
       "title": "Adalbero's KB - Markdown syntax",
       "path": "markdown",
       "file": "Sample.md",
+      "img": "https://cloudspoint.xyz/wp-content/uploads/2020/02/CODE-1.jpg",
       "tags": [
         "markdown",
         "kb",
@@ -48,6 +51,7 @@
       "title": "h1 Heading 8-)",
       "path": "markdown",
       "file": "markdown-it.md",
+      "img": null,
       "tags": [
         "markdown",
         "change"
@@ -58,6 +62,7 @@
       "title": "ngx-markdown",
       "path": "markdown",
       "file": "ngx-markdown.md",
+      "img": null,
       "tags": [
         "markdown"
       ]
@@ -67,6 +72,7 @@
       "title": "How to layout HTML in panels (top, middle, bottom, left, right, center) with CSS",
       "path": "web",
       "file": "panel.md",
+      "img": null,
       "tags": [
         "web",
         "panel",

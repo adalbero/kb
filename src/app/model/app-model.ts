@@ -3,6 +3,7 @@ export interface KBArticle {
   path: string;
   file: string;
   title: string;
+  img?: string;
   tags: string[];
 }
 

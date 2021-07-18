@@ -1,3 +1,5 @@
+![cover](https://cloudspoint.xyz/wp-content/uploads/2020/02/CODE-1.jpg)
+
 # Adalbero's KB - Markdown syntax
 
 Tags: `#markdown #kb #workflow`

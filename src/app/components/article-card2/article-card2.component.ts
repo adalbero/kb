@@ -12,13 +12,27 @@ export class ArticleCard2Component implements OnInit {
 
   photo?: string;
 
-  constructor(public photos: PhotosService) {}
+  constructor(public photos: PhotosService) { }
 
   ngOnInit(): void {
-    this.photos.requestPhoto('cat').subscribe((url) => (this.photo = url));
+    if (this.article) {
+      if (this.article.img) {
+        this.photo = this.article.img;
+      } else {
+        const idx = Math.abs(this.getHash(this.article?.id)) % 100;
+        console.log(idx);
+        this.photos.requestPhoto('code', idx).subscribe((url) => (this.photo = url));
+      }
+    }
   }
 
   getTags() {
     return '#' + this.article?.tags.join(' #');
+  }
+
+  getHash(s?: string): number {
+    if (!s) return 0;
+
+    return s.split("").reduce(function (a, b) { a = ((a << 5) - a) + b.charCodeAt(0); return a & a }, 0);
   }
 }

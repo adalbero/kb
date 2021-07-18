@@ -7,6 +7,7 @@ type Article = {
   title: string;
   path: string;
   file: string;
+  img: string | null;
   tags: string[];
 };
 
@@ -62,6 +63,7 @@ function indexArticles(
     const articlePath = path?.substring(1) || '';
     const tags: string[] = [];
     let title: string = '';
+    let img: string | null = null;
     let values: string[] | undefined;
 
     const NAME_REGEXP = /(.+)\.md$/g;
@@ -69,12 +71,23 @@ function indexArticles(
     const name = (values ? values[0] : file).toLowerCase();
     const id = `${articlePath}/${name}`;
 
+    const imgPath = `${articlePath}/${name}.jpeg`;
+    if (fs.existsSync(`${root}/${imgPath}`)) {
+      img = `articles/${imgPath}`;
+    }
+
     const lines = readFile(fullPath);
     lines.forEach((line) => {
       const TITLE_REGEXP = /^\s*#\s+(.+)/g;
       if (!title) {
         values = extractText(TITLE_REGEXP, line);
         if (values) title = values[0];
+      }
+
+      const COVER_REGEXP = /^!\[cover\]\((.+)\)/g;
+      if (!img) {
+        values = extractText(COVER_REGEXP, line);
+        if (values) img = values[0];
       }
 
       const TAG_REGEXP = /#([a-z.]+)/g;
@@ -93,6 +106,7 @@ function indexArticles(
       title,
       path: articlePath,
       file,
+      img,
       tags,
     };
 

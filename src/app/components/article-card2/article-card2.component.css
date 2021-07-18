@@ -4,6 +4,9 @@
 
 .photo {
   cursor: pointer;
+  object-fit: cover;
+  --width: 100%;
+  height: 250px;
 }
 
 .tags {
@@ -13,6 +16,7 @@
 .name {
   font-weight: bold;
   cursor: pointer;
+  font-size: 1.5rem;
 }
 
 .name:hover {
