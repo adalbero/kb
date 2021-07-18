@@ -1,5 +1,5 @@
 {
-  "updated": "2021-07-18T09:16:02.160Z",
+  "updated": "2021-07-18T16:43:46.224Z",
   "articles": [
     {
       "id": "dev/dev-tools",
@@ -8,6 +8,8 @@
       "name": "dev-tools",
       "file": "dev-tools.md",
       "img": "articles/dev/dev-tools.jpeg",
+      "author": "adalbero",
+      "date": "Sun Jul 18 2021",
       "tags": [
         "dev",
         "tools",
@@ -29,6 +31,8 @@
       "name": "git",
       "file": "git.md",
       "img": null,
+      "author": "adalbero",
+      "date": "Sun Jul 18 2021",
       "tags": [
         "dev",
         "git",
@@ -43,6 +47,8 @@
       "name": "sample",
       "file": "Sample.md",
       "img": "https://cloudspoint.xyz/wp-content/uploads/2020/02/CODE-1.jpg",
+      "author": "adalbero",
+      "date": "Sun Jul 18 2021",
       "tags": [
         "markdown",
         "kb",
@@ -56,6 +62,8 @@
       "name": "markdown-it",
       "file": "markdown-it.md",
       "img": null,
+      "author": "adalbero",
+      "date": "Sun Jul 18 2021",
       "tags": [
         "markdown",
         "change"
@@ -68,6 +76,8 @@
       "name": "ngx-markdown",
       "file": "ngx-markdown.md",
       "img": null,
+      "author": "adalbero",
+      "date": "Sun Jul 18 2021",
       "tags": [
         "markdown"
       ]
@@ -79,6 +89,8 @@
       "name": "panel",
       "file": "panel.md",
       "img": null,
+      "author": "adalbero",
+      "date": "Sun Jul 18 2021",
       "tags": [
         "web",
         "panel",
