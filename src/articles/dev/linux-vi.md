@@ -8,3 +8,7 @@
 - `:e` - reload file
 - `:e!` - discard changes and reload file
 - `:set autoread` - enable auto read
+
+### Line break
+- `:set wrap` - break line
+- `:set nowrap` - no line break
