@@ -1,5 +1,5 @@
 {
-  "updated": "2021-07-18T08:46:09.348Z",
+  "updated": "2021-08-03T13:45:18.662Z",
   "articles": [
     {
       "id": "dev/dev-tools",
@@ -32,6 +32,19 @@
         "git",
         "github",
         "workflow"
+      ]
+    },
+    {
+      "id": "dev/linux-vi",
+      "title": "Linux vi Tricks & Tips",
+      "path": "dev",
+      "file": "linux-vi.md",
+      "img": null,
+      "tags": [
+        "dev",
+        "vi",
+        "vim",
+        "linux"
       ]
     },
     {
