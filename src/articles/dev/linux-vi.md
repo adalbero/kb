@@ -1,7 +1,10 @@
 # Linux vi Tricks & Tips
 `#vi #vim #linux`
 
-### Turn on line number
-```
-:set number
-```
+### Line number
+- `:set number` - turn on line number
+
+### Reload file
+- `:e` - reload file
+- `:e!` - discard changes and reload file
+- `:set autoread` - enable auto read
