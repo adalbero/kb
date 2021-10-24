@@ -1,6 +1,6 @@
 # Adalbero KB <small>1.0</small>
 
-![logo](/kb-logo.png)
+![logo](/_media/kb-logo.png)
 
 > My knowledge base to share with the community.
 
