@@ -4,13 +4,6 @@
   <a data-theme="dark" onClick="setTheme('dark')">dark</a>
 </ul>
 
-* Navigation
-  * [Home](/)
-  * [Dev](/dev/)
-  * [Markdown](/markdown/)
-  * [Web](/web/)
-
-
 <style>
   .demo-theme-preview a {
     padding-right: 10px;

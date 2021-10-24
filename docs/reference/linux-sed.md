@@ -1,7 +1,8 @@
-# Linux sed command
-`#linux #sed`
+# Linux - `sed` command
 
-### Extract range of lines from a file
+> Tags `#linux #bash #shell #sed`
+
+## Extract range of lines from a file
 ```bash
 sed -n '16224,16482 p' orig-data-file > new-file
 ```

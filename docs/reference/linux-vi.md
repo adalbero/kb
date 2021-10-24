@@ -1,14 +1,15 @@
-# Linux vi Tricks & Tips
-`#vi #vim #linux`
+# Linux - `vi` command
 
-### Line number
+> Tags `#linux #bash #shell #vi #vim`
+
+## Line number
 - `:set number` - turn on line number
 
-### Reload file
+## Reload file
 - `:e` - reload file
 - `:e!` - discard changes and reload file
 - `:set autoread` - enable auto read
 
-### Line break
+## Line break
 - `:set wrap` - break line
 - `:set nowrap` - no line break

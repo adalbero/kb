@@ -1,11 +1,12 @@
 # Adalbero KB <small>1.0</small>
 
-> A magical documentation site generator.
+![logo](/kb-logo.png)
 
-- Simple and lightweight
-- No statically built html files
-- Multiple themes
+> My knowledge base to share with the community.
+
+- References
+- Tutorials
 
 [GitHub](https://github.com/adalbero/kb)
-[Get Started](#adalbero-kb)
+[Get Started](#home)
 

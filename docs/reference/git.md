@@ -1,6 +1,6 @@
-# Git Tips & Tricks
+# Git
 
-`#git #github`
+> Tags `#git #github`
 
 ## Reset Password on Windows
 

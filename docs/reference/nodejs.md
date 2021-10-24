@@ -1,28 +1,12 @@
-# Developer Tools
+# Node JS
 
-`#dev #tools`
-
----
-
-## Eclipse
-
-`#eclipse`
-
-Get Eclipse JEE version.
-
-> **Download**: [Home Page](https://www.eclipse.org/downloads/)
-
----
-
-## Node.js
-
-`#nodejs`
+> Tags `#nodejs`
 
 Select the latest LTS version.
 
 > **Home Page:** [Node.js](https://github.com/nullivex/nodist)
 
-### Node Version Manager
+## Node Version Manager
 
 Allow to change between node versions to satisfy different project requirements.
 
@@ -40,25 +24,3 @@ Allow to change between node versions to satisfy different project requirements.
 ```
 
 > Home Page: [nodist](https://github.com/nullivex/nodist)
-
----
-
-## Git
-
-`#git`
-
-### TortoiseGit
-
-> **Download** (TortoiseGit)[https://tortoisegit.org/]
-
-## Windows Terminal
-
-`#windows #terminal`
-
-## VS Code - Insiders
-
-`#vscode #javascript`
-
-## Angular
-
-`#angular #javascript #typescript`

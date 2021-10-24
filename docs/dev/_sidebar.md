@@ -1,7 +1,0 @@
-* [**Home**](/)
-* [**Dev**](/dev/)
-  * [dev-tools](dev-tools.md)
-  * [git](git.md)
-  * [PowerShell](powershell.md)
-  * [Linux - vi](linux-vi.md)
-  * [Linux - sed](linux-sed.md)
