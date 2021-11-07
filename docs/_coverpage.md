@@ -2,7 +2,7 @@
 
 ![logo](/_media/kb-logo.png)
 
-> My knowledge base to share with the community.
+> Knowledge worth spreading.
 
 - References
 - Tutorials
