@@ -6,7 +6,7 @@
   - **Web Tools**
     - [Node JS](nodejs)
     - [Angular](angular)
-    - [RxJs](rsjs)
+    - [RxJs](rxjs)
   - **Dev Tools**
     - [Git](git)
     - [TortoiseGit](tortoisegit)
