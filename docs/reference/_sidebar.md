@@ -4,8 +4,9 @@
     - [Eclipse](eclipse)
     - [VS Code](vscode)
   - **Web Tools**
-    - [Angular](angular)
     - [Node JS](nodejs)
+    - [Angular](angular)
+    - [RxJs](rsjs)
   - **Dev Tools**
     - [Git](git)
     - [TortoiseGit](tortoisegit)
