@@ -79,7 +79,10 @@ productSuppliers$ = this.productSelected$.pipe(
   )
 );
 
-
 ```
+
+See:
+* [switchMap](./rxjs.md#switchmap)
+* [forkJoin](./rxjs.md#forkjoin)
 
 ## Pattern - Combine multipe streams

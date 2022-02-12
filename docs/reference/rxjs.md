@@ -14,6 +14,21 @@
 
 - Performs each operation one at a time, in order
 
+```typescript
+const urls = [
+   'https://api.mocki.io/v1/0350b5d5',
+   'https://api.mocki.io/v1/ce5f60e2'
+];
+
+from(urls).pipe(
+   concatMap((url) => {
+       return fromFetch(url);
+   })
+).subscribe((response) => console.log(response.status));
+```
+
+> [concatMap](https://indepth.dev/reference/rxjs/operators/concat-map) - In Depth Dev Reference
+
 ### mergeMap
 
 - Performs each operation concurrently
