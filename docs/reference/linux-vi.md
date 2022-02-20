@@ -99,63 +99,61 @@
 
 ### Ex commands
 
-| Shortcut                                        | Action                                                                        |
-| ----------------------------------------------- | ----------------------------------------------------------------------------- |
-| `:`_cmd_                                        | Execute ex command _cmd_                                                      |
-| `:` ↑ / ↓                                       | Move up/down on the history of commands                                       |
-| **_Range_**                                     |                                                                               |
-| _n_                                             | _n_ th line                                                                   |
-| _n_`,`_m_                                       | Lines from _n_ to _m_ line                                                    |
-| `'`_a_                                          | line with mark _a_                                                            |
-| `.`                                             | Current line                                                                  |
-| `$`                                             | Last line                                                                     |
-| `%`, `1,$`                                      | All lines                                                                     |
-| `-`_n_, `+`_n_                                  | Previous/next _n_ th line                                                     |
-| **_File Commands_**                             |                                                                               |
-| `:w`                                            | Save file                                                                     |
-| `:w` _filename_                                 | Save file as _filename_                                                       |
-| `:`_n_`,`_m_`w` _filename_                      | Save lines between _n_ and _m_ to _filename_                                  |
-| `:r` _filename_                                 | Insert content of _filename_ at cursor position                               |
-| `:e`                                            | Reload file                                                                   |
-| `:e!`                                           | Discard changes and reload file                                               |
-| `:set autoread`                                 | Enable auto read                                                              |
-| **_Quit Commands_**                             |                                                                               |
-| `:q`                                            | Quit                                                                          |
-| `ZZ`, `:x`, `:wq`                               | Save file and quit                                                            |
-| **_Shell Commands_**                            |                                                                               |
-| `:!`_cmd_                                       | Execute shell command _cmd_                                                   |
-| `:sh`                                           | Open shell                                                                    |
-| **_Find & Replace Command_**                    |                                                                               |
-| `:[range] s/{pattern}/{string}/[flags] [count]` | Find and replace {pattern} with {string}                                      |
-| `:s/{pattern}/{string}`                         | Find and replace first {pattern} with {string} in current line                |
-| `:s/{pattern}/`                                 | Find and replace first {pattern} empty string                                 |
-| `:s//{string}`                                  | Find and replace last searched {pattern} with {string}                        |
-| `:s/{pattern}/{string}/g`                       | Find and replace all {pattern} with {string} in current line                  |
-| `:1,5 s/{pattern}/{string}/g`                   | Find and replace {pattern} with {string} in lines 1 to 5                      |
-| `:% s/{pattern}/{string}/gc`                    | Find and replace {pattern} with {string} in all file, asking for confirmation |
-| **_Replace_**                                   |                                                                               |
-| `\n`                                            | New line                                                                      |
-| `\&`                                            | Matched text                                                                  |
-| `\0`                                            | Matched text                                                                  |
-| `\`_n_                                          | Group _n_ th                                                                  |
-| `g`, `c`, `i`, `I`                              | Global / Confirm / Case-insensitive / Case-sensitive                          |
-| **_Flag_**                                      |                                                                               |
-| `g`, `c`, `i`, `I`                              | Global / Confirm / Case-insensitive / Case-sensitive                          |
+| Shortcut                                | Action                                                                        |
+| --------------------------------------- | ----------------------------------------------------------------------------- |
+| `:`_cmd_                                | Execute ex command _cmd_                                                      |
+| `:` ↑ / ↓                               | Move up/down on the history of commands                                       |
+| **_Range_**                             |                                                                               |
+| _n_                                     | _n_ th line                                                                   |
+| _n_`,`_m_                               | Lines from _n_ to _m_ line                                                    |
+| `'`_a_                                  | line with mark _a_                                                            |
+| `.`                                     | Current line                                                                  |
+| `$`                                     | Last line                                                                     |
+| `%`, `1,$`                              | All lines                                                                     |
+| `-`_n_, `+`_n_                          | Previous/next _n_ th line                                                     |
+| **_File Commands_**                     |                                                                               |
+| `:w`                                    | Save file                                                                     |
+| `:w` _filename_                         | Save file as _filename_                                                       |
+| `:[range] w` _filename_                 | Save lines in _range_ to _filename_                                           |
+| `:r` _filename_                         | Insert content of _filename_ at cursor position                               |
+| `:e`                                    | Reload file                                                                   |
+| `:e!`                                   | Discard changes and reload file                                               |
+| `:set autoread`                         | Enable auto read                                                              |
+| **_Quit Commands_**                     |                                                                               |
+| `:q`                                    | Quit                                                                          |
+| `ZZ`, `:x`, `:wq`                       | Save file and quit                                                            |
+| **_Shell Commands_**                    |                                                                               |
+| `:!`_cmd_                               | Execute shell command _cmd_                                                   |
+| `:sh`                                   | Open shell                                                                    |
+| **_Find & Replace Command_**            |                                                                               |
+| `:[range] s/{pattern}/{string}/[flags]` | Find and replace {pattern} with {string}                                      |
+| `:s/{pattern}/{string}`                 | Find and replace first {pattern} with {string} in current line                |
+| `:s/{pattern}/`                         | Find and replace first {pattern} empty string                                 |
+| `:s//{string}`                          | Find and replace last searched {pattern} with {string}                        |
+| `:s/{pattern}/{string}/g`               | Find and replace all {pattern} with {string} in current line                  |
+| `:1,5 s/{pattern}/{string}/g`           | Find and replace {pattern} with {string} in lines 1 to 5                      |
+| `:% s/{pattern}/{string}/gc`            | Find and replace {pattern} with {string} in all file, asking for confirmation |
+| **_Replace_**                           |                                                                               |
+| `\&`, `\0`                              | Replace with matched text                                                     |
+| `\`_n_                                  | Replace with _n_ th group                                                     |
+| **_Flag_**                              |                                                                               |
+| `g`, `c`, `i`, `I`                      | Global / Confirm / Case-insensitive / Case-sensitive                          |
 
 ### Options
 
-| Shortcut                  | Action                    |
-| ------------------------- | ------------------------- |
-| `:set`                    | Show current options      |
-| `:set all`                | Show all options          |
-| `:set `_option_           | Enable _option_           |
-| `:set no`_option_         | Disable _option_          |
-| `:set `_option_`=`_value_ | Set _option_ _value_      |
-| `:set `_option_`?`        | Show _option_ value       |
-| **_Common Options_**      |                           |
-| `number / nu`             | Show line number          |
-| `wrap`                    | Warp line                 |
-| `ignorecase / ic`         | Ignore case during search |
+| Shortcut                  | Action                                |
+| ------------------------- | ------------------------------------- |
+| `:set`                    | Show current options                  |
+| `:set all`                | Show all options                      |
+| `:set `_option_           | Enable _option_. Ex: `:set number`    |
+| `:set no`_option_         | Disable _option_. Ex: `:set nonumber` |
+| `:set `_option_`=`_value_ | Set _option_ _value_                  |
+| `:set `_option_`?`        | Show _option_ value                   |
+| **_Common Options_**      |                                       |
+| `number / nu`             | Show line number                      |
+| `wrap`                    | Warp line                             |
+| `ignorecase / ic`         | Ignore case during search             |
+| `autoread`                | Watch file                            |
 
 ## Reference
 
